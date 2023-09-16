@@ -1,0 +1,343 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  transition-timing-function: ease-in;
+  transition: all 0.1s;
+}
+body {
+  background-color: #e6e9ed;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid {
+  animation-name: fadeOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+.active {
+  color: #4d83ff;
+}
+.sidebar-body {
+  ul {
+    li:hover {
+      color: #4d83ff;
+      cursor: pointer;
+    }
+  }
+}
+
+.container-dash {
+  background-color: #e6e9ed;
+  .container-body {
+    border: 2px solid red;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.dashboard-main-1 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+
+  .sidebar {
+    background-color: #fff;
+    border-right: 1px solid #e6e9ed;
+    .sidebar-header {
+      padding: 25px;
+      border-bottom: 1px solid #e6e9ed;
+      position: relative;
+
+      h6 {
+        display: inline;
+        font-size: 20px;
+
+        text-transform: capitalize;
+        font-weight: 600;
+        text-shadow: 2px 2px #e6e9ed;
+
+        color: #4d83ff;
+      }
+      .menu {
+        position: absolute;
+        right: 22px;
+        top: 28px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+
+    .sidebar-body {
+      li {
+        padding: 10px;
+        margin: 12px auto;
+        font-size: 15px;
+
+        border-bottom: 1px solid #e6e9ed;
+        span {
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        i {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-column-gap: 40px;
+    background-color: #fff;
+    margin-left: 0.1px;
+    justify-content: center;
+    padding: 20px;
+
+    .box-2 {
+      i {
+        font-size: 20px;
+        margin-left: 15px;
+        color: grey;
+      }
+
+      .drop-down {
+        z-index: 1;
+        position: absolute;
+        padding: 10px;
+        text-align: left;
+        background-color: #fff;
+        right: 40px;
+        top: 76px;
+        width: 10%;
+        cursor: pointer;
+        animation-name: fadeOut;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        ul {
+          li {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+
+            cursor: pointer;
+          }
+        }
+      }
+      span {
+        cursor: pointer;
+        font-weight: 600;
+        color: black;
+        i {
+          margin-left: 10px;
+        }
+
+        img {
+          width: 35px;
+
+          display: inline;
+          margin-left: 40px;
+          margin-right: 7px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+      }
+    }
+
+    form {
+      padding: 5.6px;
+      border-radius: 5px;
+      font-size: 10px;
+      margin-left: 10px;
+      width: 100%;
+
+      background-color: #e6e9ed;
+
+      i {
+        margin-right: 10px;
+        font-size: 15px;
+        padding-left: 10px;
+      }
+      input {
+        display: inline;
+        margin-left: 5px;
+        width: 60%;
+        background-color: #e6e9ed;
+        outline: none;
+        width: 100%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.dashboard-main-2 {
+  width: 100%;
+  transition-timing-function: ease-in !important;
+  transition: all 0.5s !important;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0fr 6fr;
+
+  .sidebar {
+    background-color: #fff;
+    border-right: 1px solid #e6e9ed;
+    .sidebar-header {
+      text-align: center;
+      padding: 29.4px;
+      border-bottom: 1px solid #e6e9ed;
+      position: static;
+
+      h6 {
+        display: none;
+      }
+      i {
+        cursor: pointer;
+        position: static;
+        right: 10px;
+        top: 10px;
+        font-size: 15px;
+      }
+    }
+
+    .sidebar-body {
+      li {
+        text-align: center;
+        padding: 10px;
+        font-size: 25px;
+        border-bottom: 1px solid #e6e9ed;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 9fr 2fr;
+    grid-column-gap: 40px;
+    background-color: #fff;
+    margin-left: 0.1px;
+    justify-content: center;
+    padding: 20px;
+
+    .box-2 {
+      i {
+        font-size: 20px;
+        margin-left: 15px;
+        color: grey;
+      }
+      .drop-down {
+        z-index: 1;
+        position: absolute;
+        padding: 10px;
+        text-align: left;
+        background-color: #fff;
+        right: 48px;
+        top: 76px;
+        width: 10%;
+        cursor: pointer;
+        animation-name: fadeOut;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        ul {
+          li {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+          }
+        }
+      }
+      span {
+        cursor: pointer;
+        font-weight: 600;
+        color: black;
+        i {
+          margin-left: 10px;
+        }
+
+        img {
+          width: 35px;
+
+          display: inline;
+          margin-left: 40px;
+          margin-right: 7px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+      }
+    }
+
+    form {
+      padding: 5.6px;
+      border-radius: 5px;
+      font-size: 10px;
+      margin-left: 10px;
+      width: 100%;
+
+      background-color: #e6e9ed;
+
+      i {
+        margin-right: 10px;
+        font-size: 15px;
+        padding-left: 10px;
+      }
+      input {
+        display: inline;
+        margin-left: 5px;
+        width: 60%;
+        background-color: #e6e9ed;
+        outline: none;
+        width: 100%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// table
+.searchBar {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 10px auto;
+  outline: none;
+}
+.table {
+  border: 5px solid #fff;
+  thead tr th {
+    cursor: pointer;
+  }
+}
+.select-option {
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+// table end
+
+@media (max-width: 768px) {
+  .dashboard-main-1,
+  .dashboard-main-2 {
+    display: none;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
